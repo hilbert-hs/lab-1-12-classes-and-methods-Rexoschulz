@@ -4,7 +4,7 @@ public class MyShape {
     // declare variables for length, width, and area
     double length = 0.0;
     double width = 0.0;
-    double area = 0.0;
+    double area;
 
     // use a Scanner object to get length and width values
     Scanner scan = new Scanner(System.in);
@@ -12,10 +12,12 @@ public class MyShape {
     length = scan.nextDouble();
     System.out.println("Give me a width");
     width = scan.nextDouble();
+    scan.close();
     // call your methods to test your program
     area = calculateArea(length, width);
-    
-    System.out.println("The peri")
+    double peri = calculatePeri(length, width);
+    System.out.println("The perimeter is " + peri);
+    System.out.println("The area is " + area);
     
   }
 
